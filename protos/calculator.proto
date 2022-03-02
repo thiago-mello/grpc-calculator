@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+service CalculatorService {
+    rpc AddValues (OperationRequest) returns (OperationResponse);
+
+    rpc SubValues (OperationRequest) returns (OperationResponse);
+
+    rpc MultValues (OperationRequest) returns (OperationResponse);
+
+    rpc DivValues (OperationRequest) returns (OperationResponse);
+}
+
+message OperationRequest {
+    float firstArg = 1;
+    float secondArg = 2;
+}
+
+message OperationResponse {
+    bool error = 1;
+    string message = 2;
+    float result = 3;
+}

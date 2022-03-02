@@ -1,0 +1,6 @@
+__pycache__
+venv
+calculator_server.py
+.gradle
+.idea
+build
